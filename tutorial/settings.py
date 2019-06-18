@@ -40,6 +40,27 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'accounts'
+    
+'django.contrib.sites',
+'django.contrib.humanize',
+'djangocms_admin_style',
+'django.contrib.admin',
+'django_extensions',
+'django_model_changes',
+'django_messages',
+'userena',
+'guardian',
+'easy_thumbnails',
+'mathfilters',
+'crispy_forms',
+'accounts',
+'paypal.standard.ipn',
+'loans',
+'messaging',
+'rest_framework',
+'rest_framework.authtoken',
+
+
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
