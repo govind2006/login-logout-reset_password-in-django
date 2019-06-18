@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/dev/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/dev/ref/settings/
 """
+
 import django_heroku
 
 import os
@@ -125,5 +126,7 @@ LOGIN_REDIRECT_URL='/account/'
 
 EMAIL_HOST = 'localhost'
 EMAIL_PORT = 1025
+
 django_heroku.settings(locals())
+
 
