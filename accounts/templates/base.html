@@ -14,30 +14,30 @@
     {% endblock %}
     </head>
     <body>
-      <br>
+      
       <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <div id="navbar" class="navbar-collapse collapse">
-     <ul class="nav navbar-nav navbar-left">
-     </div>
+    
      <div id="navbar" class="navbar-collapse collapse">
       {% if user.is_authenticated %}
-       <ul class="nav navbar-nav navbar-left">
-         <li style="margin-left:37em"><a href="/account">Home</a></li>
-         <li style="margin-left:1em"><a href="/account/logout">Log out</a></li>
-         <li style="margin-left:1em"><a href="/account/profile">Profile</a></li>
-         <li style="margin-left:1em"><a href="/account/edit_profile">Edit Profile</a></li>
-         <li style="margin-left:1em"><a href="/account/change_password">Change Password</a></li>
+      <ul class="col text-center">
+         <button type="button" class="btn btn-link"><a href="/"><h3>Home</h3></a></button>
+         <button type="button" class="btn btn-link"><a href="/account/profile"><h3>View Profile</h3></a></button>
+         <button type="button" class="btn btn-link"><a href="/account/edit_profile"><h3>Edit Profile</h3></a></button>
+         <button type="button" class="btn btn-link"><a href="/account/logout"><h3>Log Out</h3></a></button>
+       <button type="button" class="btn btn-link"><a href="/account/change_password"><h3>Change Password</h3></a></button>
+      
         </ul>
-
+  
         {% else %}
-
-        <ul class="nav navbar-nav navbar-right">
-          <li style="margin-left:65em"><a href="/account/login">Login</a></li>
-          <li style="margin-left:1em"><a href="/account/register">Register</a></li>
-          <li style="margin-left:1em"><a href="/account/reset-password">Reset Password</a></li>
+  
+        <ul class="col text-center">
+       
+            <button type="button" class="btn btn-link"><a href="/account/login"><h3>Login</h3></a></button>
+            <button type="button" class="btn btn-link"><a href="/account/register"><h3>Register</h3></a></button>
+            <button type="button" class="btn btn-link"><a href="/account/reset-password"><h3>Reset Password</h3></a></button>
         </ul>
-
-        {% endif %}
+  
+      {% endif %} 
 
       </div>
   </nav>
