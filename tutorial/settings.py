@@ -25,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 't3=jddhbipctmov8#n-c%b!qoo9#wsf(ez46hhn6yqq2kskwv4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'accounts'
-   
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -129,5 +128,3 @@ EMAIL_HOST = 'localhost'
 EMAIL_PORT = 1025
 
 django_heroku.settings(locals())
-
-
