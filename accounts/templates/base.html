@@ -14,30 +14,31 @@
     {% endblock %}
     </head>
     <body>
-      
+      <br>
+
       <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     
      <div id="navbar" class="navbar-collapse collapse">
-      {% if user.is_authenticated %}
+     {% if user.is_authenticated %}
+    <ul class="col text-center">
+       <button type="button" class="btn btn-link"><a href="/account"><h3>Home</h3></a></button>
+       <button type="button" class="btn btn-link"><a href="/account/profile"><h3>View Profile</h3></a></button>
+       <button type="button" class="btn btn-link"><a href="/account/edit_profile"><h3>Edit Profile</h3></a></button>
+       <button type="button" class="btn btn-link"><a href="/account/logout"><h3>Log Out</h3></a></button>
+	   <button type="button" class="btn btn-link"><a href="/account/change_password"><h3>Change Password</h3></a></button>
+	  
+      </ul>
+
+      {% else %}
+
       <ul class="col text-center">
-         <button type="button" class="btn btn-link"><a href="/account"><h3>Home</h3></a></button>
-         <button type="button" class="btn btn-link"><a href="/account/profile"><h3>View Profile</h3></a></button>
-         <button type="button" class="btn btn-link"><a href="/account/edit_profile"><h3>Edit Profile</h3></a></button>
-         <button type="button" class="btn btn-link"><a href="/account/logout"><h3>Log Out</h3></a></button>
-       <button type="button" class="btn btn-link"><a href="/account/change_password"><h3>Change Password</h3></a></button>
-      
-        </ul>
-  
-        {% else %}
-  
-        <ul class="col text-center">
-       
-            <button type="button" class="btn btn-link"><a href="/account/login"><h3>Login</h3></a></button>
-            <button type="button" class="btn btn-link"><a href="/account/register"><h3>Register</h3></a></button>
-            <button type="button" class="btn btn-link"><a href="/account/reset-password"><h3>Reset Password</h3></a></button>
-        </ul>
-  
-      {% endif %} 
+			<button type="button" class="btn btn-link"><a href="/account"><h3>Home</h3></a></button>
+          <button type="button" class="btn btn-link"><a href="/account/login"><h3>Login</h3></a></button>
+          <button type="button" class="btn btn-link"><a href="/account/register"><h3>Register</h3></a></button>
+          <button type="button" class="btn btn-link"><a href="/account/reset-password"><h3>Reset Password</h3></a></button>
+      </ul>
+
+	  {% endif %} 
 
       </div>
   </nav>
