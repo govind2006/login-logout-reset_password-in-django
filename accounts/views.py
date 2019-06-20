@@ -9,6 +9,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserChangeForm, PasswordChangeForm
 from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.decorators import login_required
+from django.core.mail import send_mail
 
 def home(request):
     numbers=[1,2,3,4]

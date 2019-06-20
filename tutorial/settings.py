@@ -25,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 't3=jddhbipctmov8#n-c%b!qoo9#wsf(ez46hhn6yqq2kskwv4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'accounts'
+    
+   
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -124,7 +126,17 @@ STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL='/account/'
 
 
-EMAIL_HOST = 'localhost'
-EMAIL_PORT = 1025
+# EMAIL_HOST = 'localhost'
+# EMAIL_PORT = 1025
+
+#For mailing purposes
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = '17bcs022@smvdu.ac.in'
+EMAIL_HOST_PASSWORD = 'gk3017528'
+OPERATIONS_EMAIL = '17bcs022@smvdu.ac.in'
 
 django_heroku.settings(locals())
+
+
